@@ -44,7 +44,7 @@
 - name: create mongodb read-only directories
   file:
     state: directory
-    path: "{{ mongodb_conf_file | dirname }}"
+    path: "{{ item.path }}"
     owner: root
     group: root
     mode: "0755"
